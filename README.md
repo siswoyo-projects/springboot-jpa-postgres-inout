@@ -16,3 +16,7 @@
 1. PostgreSQL - https://www.postgresql.org/download/windows/
 2. Intellij IDEA - https://www.jetbrains.com/idea/download/#section=windows
 3. GitHub Desktop - https://desktop.github.com/
+
+# Postman
+1. https://www.postman.com/siswoyo-projects/workspace/tms-apis/overview
+2. Please check the collections - inout and inoutline.
