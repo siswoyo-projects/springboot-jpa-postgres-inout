@@ -10,6 +10,7 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @RestController
@@ -36,13 +37,20 @@ public class InoutController {
 
     @GetMapping("/all")
     public List<InoutDTO> findAll() {
-        return inoutService.findAll().stream().map(merchant -> inoutService.mapToDto(merchant))
+        return inoutService.findAll().stream().map(inout -> inoutService.mapToDto(inout))
                 .collect(Collectors.toList());
     }
 
+    /*
+    @GetMapping("/{id}")
+    public Optional<InoutDTO> findById(Long id) {
+        return inoutService.findById(id);
+    }
+    */
+
     @GetMapping("/search")
     public Page<InoutDTO> findAllWithPagination(@PageableDefault Pageable pageable) {
-        return inoutService.findAll(pageable).map(merchant -> inoutService.mapToDto(merchant));
+        return inoutService.findAll(pageable).map(inout -> inoutService.mapToDto(inout));
     }
 
     @DeleteMapping("/delete/{id}")
