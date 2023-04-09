@@ -20,4 +20,5 @@ public interface InoutService {
 
     InoutDTO mapToDto(Inout inout);
     Inout mapToEntity(InoutDTO inoutDTO);
+
 }
